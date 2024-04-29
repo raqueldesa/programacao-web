@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Gato de Botas 2
+    </h1>
+    <div>
+        <h2>Sinopse</h2>
+        Em <strong> Gato de Botas 2: O Último Pedido</strong>, O Gato de Botas 
+        descobre que sua paixão pela aventura cobrou seu preço: 
+        por conta de seu gosto pelo perigo e pelo desrespeito à segurança pessoal,
+         ele queimou oito de suas nove vidas. Com apenas uma vida restante, o Gato precisa pedir
+          ajuda para uma antiga parceira - que atualmente é sua rival e inimiga mortal,
+           Kitty Pata Mansa - para continuar vivo. Então, o destemido bichano parte em uma 
+           jornada épica pela Floresta Negra para encontrar a mítica Estrela dos Desejos,
+         capaz de proporcionar o legendário Último Desejo e restaurar suas nove vidas.
+    </div>
+    <div>
+        <p>
+            Cartaz:
+        </p> 
+        <img width="300" src="https://blog-leiturinha-novo.s3.us-east-1.amazonaws.com/production/uploads/2023/01/imagem-gato-de-botas-3.png" alt="Cartaz do Filme">
+    </div>
+    <div>
+        <p>Exemplo de código <strong>Javascript </strong></p>
+        <pre>
+        
+    const myHeading = document.querySelector("h1");
+    myHeading.textContent = "Olá mundo!";
+        
+    </div>
+
+    <div>
+        <p>O código abaixo usa as tags <strong> sub, small</strong> e <strong> sup:  </p>
+        <p> <sub>1</sub> 2 <sup>3</sup> 4 <sub>5</sub> 6 <sup>7</sup> 8 <sub>9</sub> </p>
+    </div>
+</body>
+</html>
