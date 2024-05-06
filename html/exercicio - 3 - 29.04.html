@@ -12,30 +12,37 @@
       Agradecemos por seu contato.
     </p>
     <form action="">
-      <h5>Dados Básicos</h5>
-      <label for="nome">Nome</label>
-      <input type="text" name="nome" id="" />
-
-      <label for="email">E-mail</label>
+        <fieldset>
+            <legend>Dados Básicos</legend>
+            
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="" />
+            
+            <label for="email">E-mail</label>
       <input
-        type="email"
-        name="email"
-        id=""
-        placeholder="exemplo@dominio.com.br"
+      type="email"
+      name="email"
+      id=""
+      placeholder="exemplo@dominio.com.br"
       />
-
+      
       <label for="website">Website</label>
       <input type="url" name="website" id="" />
+    </fieldset>
+    <fieldset>
+        <legend>Seu curso no Instituto de Computação</legend>
 
-      <h5>Seu curso no Instituto de Computação</h5>
+      
       <input type="radio" name="CC" />
       <label for="CC">Ciêcia da Computação</label>
       <input type="radio" name="SI" />
       <label for="SI">Sistemas de Informação</label>
       <input type="radio" name="EC" />
       <label for="EC">Engenharia da Computação</label>
+    </fieldset>
 
-      <h5>Assinale as linguagens já usadas por você:</h5>
+    <fieldset>
+        <legend>Assinale as linguagens já usadas por você:</legend>
 
       <label for="java">Java</label>
       <input type="checkbox" name="java" id="" />
@@ -49,8 +56,13 @@
       <input type="checkbox" name="Python" id="" />
       <label for="JavaScript">JavaScript</label>
       <input type="checkbox" name="JavaScript" id="" />
+    </fieldset>
 
-      <h5>Dados complemntares</h5>
+
+    <fieldset>
+        <legend>
+            Dados complemntares
+        </legend>
       <label for="cor">Cor favorita</label>
       <input type="color" name="cor" id="" />
       <label for="data_nasc">Data de Nascimento</label>
@@ -59,8 +71,11 @@
       <input type="number" />
       <label for="nota">Nota para este site</label>
       <input type="range" />
+    </fieldset>
 
-      <h5>Área de atuação</h5>
+    <fieldset>
+        <legend>Área de atuação</legend>
+     
       <select name="area" id="">
         <option value="BD">Banco de Dados</option>
         <option value="AM">Aprendizado de máquina</option>
@@ -69,13 +84,16 @@
 
       <h5>Submeta seu currículo vitae</h5>
       <input type="file" name="curriculo" id="" />
-
-      <h5>Digite sua Mensagem</h5>
+    </fieldset>
+<fieldset>
+    <legend>Digite sua Mensagem</legend>
       <textarea name="mdg" id="" cols="30" rows="10">
 Este é  valor padrão!</textarea
       >
       <button>Resetar Dados</button>
       <button>Enviar Mensagem</button>
+</fieldset>
+
     </form>
   </body>
 </html>
