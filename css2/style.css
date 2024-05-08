@@ -1,0 +1,25 @@
+body{
+    background-image: url("./paris.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+div{
+    background-color: rgba(0, 0, 0, 0.65);
+    height: 70vh;
+    width: 15vw;
+    border-radius: 25px;
+    border: 10px solid pink;
+
+    margin: 5em ;
+    color: white;
+    text-align: center;
+
+    padding: 2em;
+    box-shadow: 4px 4px 10px 1px rgba(255, 255, 255, 0.562);
+}
+
+div p{
+    font-size: 20px;
+}
