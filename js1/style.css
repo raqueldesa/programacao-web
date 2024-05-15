@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    background-color: #121212;
+}
+
+table{
+min-width: 150px;  
+box-shadow: 2px 2px 15px 0.5px rgba(45, 167, 189, 0.462);
+border-radius: 10px;
+padding: 10px;
+background-color: #fff;
+
+}
+
+.aa{
+    border-right: 2px solid rgb(45, 167, 189, 0.462);
+}
+.head{
+    height: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(45, 167, 189);
+}
+
+td{
+    height: 20px;
+}
