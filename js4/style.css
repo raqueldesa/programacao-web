@@ -1,0 +1,19 @@
+body{
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;    
+    width: 40vw;
+    height: 20vh;
+    justify-content: space-around
+
+}
+
+input{
+    width: 90%;
+    color: #121212;
+}
