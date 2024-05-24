@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grafico da Raquel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="h1">Um gafico de barras da Raquel</h1>
+
+    <fieldset>
+      <label for="nome">Escolha cor das barras</label>
+      <input type="color" id="cor" />
+      <label for="nome">Informe a altura das barras em px</label>
+      <input type="number" min="0" id="barra1" />
+      <input type="number" min="0" id="barra2" />
+      <input type="number" min="0" id="barra3" />
+      <input type="number" min="0" id="barra4" />
+      <input type="number" min="0" id="barra5" />
+
+      <label for="nome">Informe a largura das barras em px</label>
+      <input type="number" min="0" id="largura" />
+
+      <button id="btn-ok">Desenhar o gráfico</button>
+    </fieldset>
+
+    <div class="barras">
+      <div class="barra"></div>
+      <div class="barra"></div>
+      <div class="barra"></div>
+      <div class="barra"></div>
+      <div class="barra"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
