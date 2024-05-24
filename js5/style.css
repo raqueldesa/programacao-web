@@ -1,0 +1,30 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+
+  gap: 0.5em;
+  justify-content: space-around;
+}
+
+input,
+button {
+  width: 40%;
+  color: #121212;
+}
+
+.barras {
+  height: auto;
+  width: fit-content;
+
+  margin: 2em;
+  display: flex;
+  gap: 1em;
+  align-items: flex-end;
+}
