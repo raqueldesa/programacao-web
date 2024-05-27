@@ -1,0 +1,17 @@
+body {
+  background-color: #121212;
+  color: azure;
+
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.ponto {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgb(235, 235, 235);
+
+  position: absolute
+}
