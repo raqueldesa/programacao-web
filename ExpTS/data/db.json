@@ -1,0 +1,22 @@
+{
+  "produtos": [
+    {
+      "id": 2,
+      "nome": "Tablet",
+      "preco": 200,
+      "estoque": 81
+    },
+    {
+      "id": 3,
+      "nome": "Monitor",
+      "preco": 150,
+      "estoque": 12
+    },
+    {
+      "id": 4,
+      "nome": "capa",
+      "preco": 34,
+      "estoque": 1
+    }
+  ]
+}

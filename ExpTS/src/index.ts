@@ -47,7 +47,7 @@ app.use("/js", [
   express.static(`${__dirname}/../node_modules/bootstrap/dist/js/`),
 ]);
 app.use("/img", express.static(`${publicPath}/public/img`));
-
+app.use(express.urlencoded({ extended: false }));
 app.use(router);
 app.listen(PORT, () => {
   console.log(`Express app iniciada na porta ${PORT}.`);

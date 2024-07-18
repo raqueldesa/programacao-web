@@ -1,0 +1,9 @@
+<h1>Detalhes do Produto</h1>
+<p>Nome: {{produto.nome}}</p>
+<p>Preço: R$ {{produto.preco}}</p>
+<p>Estoque: {{produto.estoque}}</p>
+<a href="/produto">Voltar</a>
+<a href="/produto/update/{{produto.id}}">Editar</a>
+<form action="/produto/{{produto.id}}" method="post" style="display:inline;">
+  <button type="submit">Excluir</button>
+</form>
