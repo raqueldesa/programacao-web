@@ -13,6 +13,12 @@ app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
 app.set("views", `${__dirname}/views`);
 console.log(`${__dirname}/views`);
+app.engine(
+  "handlebars",
+  engine({
+    helpers: require(`${__dirname}/views/helpers/helpers.ts`),
+  })
+);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
   console.log(`Requisição ${req.method} ${req.url}`);
