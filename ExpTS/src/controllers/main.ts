@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { generateLoremIpsum } from "../utils/utils";
 
 const index = (req: Request, res: Response) => {
-  res.send("Página principal do site");
+  res.render("main/index", { mensagem: "Página inicial <3", layout: "index" });
 };
 
 const sobre = (req: Request, res: Response) => {
@@ -19,7 +19,7 @@ const lorem = (req: Request, res: Response) => {
 const hb1 = (req: Request, res: Response) => {
   res.render("main/hb1", {
     mensagem: "Olá, você está aprendendo Express + HBS!",
-    layout: false,
+    layout: "index",
   });
 };
 
@@ -28,7 +28,7 @@ const hb2 = (req: Request, res: Response) => {
     poweredByNodejs: true,
     name: "Express",
     type: "Framework",
-    layout: false,
+    layout: "index",
   });
 };
 
@@ -39,7 +39,7 @@ const hb3 = (req: Request, res: Response) => {
     { nome: "Edleno Moura", sala: 1236 },
     { nome: "Elaine Harada", sala: 1231 },
   ];
-  res.render("main/hb3", { profes, layout: false });
+  res.render("main/hb3", { profes, layout: "index" });
 };
 
 const hb4 = (req: Request, res: Response) => {
@@ -52,7 +52,7 @@ const hb4 = (req: Request, res: Response) => {
     { name: "Docker", type: "Virtualization", poweredByNodejs: false },
     { name: "Sequelize", type: "ORM tool", poweredByNodejs: true },
   ];
-  res.render("main/hb4", { technologies, layout: false });
+  res.render("main/hb4", { technologies, layout: "index" });
 };
 
 export default { index, sobre, lorem, hb1, hb2, hb3, hb4 };

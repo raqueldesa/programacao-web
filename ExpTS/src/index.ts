@@ -9,10 +9,15 @@ const app = express();
 const PORT = process.env.PORT || 3333;
 const publicPath = `${process.cwd()}`;
 
-app.engine("handlebars", engine());
+app.engine(
+  "handlebars",
+  engine({
+    layoutsDir: `${__dirname}/views/layouts`,
+    defaultLayout: "index",
+  })
+);
 app.set("view engine", "handlebars");
 app.set("views", `${__dirname}/views`);
-console.log(`${__dirname}/views`);
 app.engine(
   "handlebars",
   engine({
