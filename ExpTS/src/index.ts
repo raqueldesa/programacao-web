@@ -1,14 +1,18 @@
 import express, { NextFunction, Request, Response } from "express";
 import dotenv from "dotenv";
 import loggerMiddleware from "./loggerMiddleware";
-
+import { engine } from "express-handlebars";
 import router from "../router/router";
 
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3333;
 const publicPath = `${process.cwd()}`;
-console.log(publicPath);
+
+app.engine("handlebars", engine());
+app.set("view engine", "handlebars");
+app.set("views", `${__dirname}/views`);
+console.log(`${__dirname}/views`);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
   console.log(`Requisição ${req.method} ${req.url}`);
