@@ -2,7 +2,7 @@ import express, { NextFunction, Request, Response } from "express";
 import dotenv from "dotenv";
 import loggerMiddleware from "./loggerMiddleware";
 import { engine } from "express-handlebars";
-import router from "../router/router";
+import router from "./router/router";
 
 dotenv.config();
 const app = express();
