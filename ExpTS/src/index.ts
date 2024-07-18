@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import loggerMiddleware from "./loggerMiddleware";
 import { engine } from "express-handlebars";
 import router from "./router/router";
+import sass from "node-sass-middleware";
 
 dotenv.config();
 const app = express();
@@ -31,7 +32,16 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });
 app.use(loggerMiddleware("completo"));
 
-app.use("/css", express.static(`${publicPath}/public/css`));
+app.use(
+  sass({
+    src: `${__dirname}/../public/scss`,
+    dest: `${__dirname}/../public/css`,
+    outputStyle: "compressed",
+    prefix: "/css",
+  })
+);
+app.use("/css", express.static(`${__dirname}/../public/css`));
+
 app.use("/js", express.static(`${publicPath}/public/js`));
 app.use("/img", express.static(`${publicPath}/public/img`));
 

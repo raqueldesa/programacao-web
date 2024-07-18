@@ -18,7 +18,7 @@ const lorem = (req: Request, res: Response) => {
 
 const hb1 = (req: Request, res: Response) => {
   res.render("main/hb1", {
-    mensagem: "Olá, você está aprendendo Express + HBS!",
+    uf: "Universidade Federal do Amazonas",
     layout: "index",
   });
 };
