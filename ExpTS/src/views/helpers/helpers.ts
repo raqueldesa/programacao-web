@@ -1,5 +1,6 @@
-import { Prof } from "./helpersTypes";
-export function listProfs(profs: Prof[]) {
-  const list = profs.map((p) => `<li>${p.nome}-${p.sala}</li>`);
+import { Tech } from "./helpersTypes";
+
+export function listTechs(technologies: Tech[]) {
+  const list = technologies.map((p) => `<li>${p.name} - ${p.type}</li>`);
   return `<ul>${list.join("")}</ul>`;
 }
