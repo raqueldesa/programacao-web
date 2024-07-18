@@ -42,7 +42,10 @@ app.use(
 );
 app.use("/css", express.static(`${__dirname}/../public/css`));
 
-app.use("/js", express.static(`${publicPath}/public/js`));
+app.use("/js", [
+  express.static(`${__dirname}/../public/js`),
+  express.static(`${__dirname}/../node_modules/bootstrap/dist/js/`),
+]);
 app.use("/img", express.static(`${publicPath}/public/img`));
 
 app.use(router);
