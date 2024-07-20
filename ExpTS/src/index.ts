@@ -1,6 +1,6 @@
 import express, { NextFunction, Request, Response } from "express";
 import dotenv from "dotenv";
-import loggerMiddleware from "./loggerMiddleware";
+import loggerMiddleware from "./middlewares/loggerMiddleware";
 import { engine } from "express-handlebars";
 import router from "./router/router";
 import sass from "node-sass-middleware";

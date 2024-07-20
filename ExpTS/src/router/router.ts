@@ -1,6 +1,7 @@
 import { Router } from "express";
 import mainController from "../controllers/main";
 import produtoController from "../controllers/produtos";
+import majorController from "../controllers/major";
 
 const router = Router();
 
@@ -20,5 +21,14 @@ router.get("/produto/update/:id", produtoController.update);
 router.post("/produto/update/:id", produtoController.update);
 router.get("/produto/:id", produtoController.read);
 router.post("/produto/:id", produtoController.remove);
+
+//Controlador Major
+router.get("/major", majorController.index);
+router.get("/major/create", majorController.create);
+router.post("/major/create", majorController.create);
+router.get("/major/read/:id", majorController.read);
+router.get("/major/update/:id", majorController.update);
+router.post("/major/update/:id", majorController.update);
+router.get("/major/remove/:id", majorController.remove);
 
 export default router;
