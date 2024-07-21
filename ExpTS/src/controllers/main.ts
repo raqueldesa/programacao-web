@@ -1,5 +1,6 @@
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import { generateLoremIpsum } from "../utils/utils";
+import { v4 as uuidv4 } from "uuid";
 
 const index = (req: Request, res: Response) => {
   res.render("main/index", { mensagem: "Página inicial <3", layout: "index" });
@@ -67,6 +68,11 @@ const clearCookie = (req: Request, res: Response) => {
   res.send("cookie apagado");
 };
 
+const uuid = (req: Request, res: Response, next: NextFunction) => {
+  const uniqueId = uuidv4();
+  res.send(`UUID: ${uniqueId}`);
+};
+
 export default {
   index,
   sobre,
@@ -77,4 +83,5 @@ export default {
   hb4,
   createCookie,
   clearCookie,
+  uuid,
 };

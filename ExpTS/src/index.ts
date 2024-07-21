@@ -5,6 +5,8 @@ import { engine } from "express-handlebars";
 import router from "./router/router";
 import sass from "node-sass-middleware";
 import cookieParser from "cookie-parser";
+import session from "express-session";
+import { v4 as uuidv4 } from "uuid";
 
 dotenv.config();
 const app = express();
@@ -50,6 +52,15 @@ app.use("/js", [
 app.use("/img", express.static(`${publicPath}/public/img`));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(
+  session({
+    genid: () => uuidv4(), // usamos UUID para gerar os SESSID
+    secret: "Hi9Cf#mK98",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
+
 app.use(router);
 
 app.listen(PORT, () => {

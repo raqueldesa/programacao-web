@@ -2,11 +2,14 @@ import { Router } from "express";
 import mainController from "../controllers/main";
 import produtoController from "../controllers/produtos";
 import majorController from "../controllers/major";
+import authController from "../controllers/auth";
 
 const router = Router();
 
 router.get("/create-cookie", mainController.createCookie);
 router.get("/clear-cookie", mainController.clearCookie);
+
+router.get("/uuid", mainController.uuid);
 
 router.get("/", mainController.index);
 router.get("/sobre", mainController.sobre);
@@ -33,5 +36,12 @@ router.get("/major/read/:id", majorController.read);
 router.get("/major/update/:id", majorController.update);
 router.post("/major/update/:id", majorController.update);
 router.get("/major/remove/:id", majorController.remove);
+
+//Controlador Auth
+router.get("/auth/signup", authController.signup);
+router.post("/auth/signup", authController.signup);
+router.post("/auth/login", authController.login);
+router.post("/auth/login", authController.login);
+router.post("/auth/logout", authController.logout);
 
 export default router;
