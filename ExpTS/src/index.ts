@@ -4,6 +4,7 @@ import loggerMiddleware from "./middlewares/loggerMiddleware";
 import { engine } from "express-handlebars";
 import router from "./router/router";
 import sass from "node-sass-middleware";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 const app = express();
@@ -48,7 +49,9 @@ app.use("/js", [
 ]);
 app.use("/img", express.static(`${publicPath}/public/img`));
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 app.use(router);
+
 app.listen(PORT, () => {
   console.log(`Express app iniciada na porta ${PORT}.`);
 });

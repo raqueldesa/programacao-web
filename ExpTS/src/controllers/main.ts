@@ -54,5 +54,27 @@ const hb4 = (req: Request, res: Response) => {
   ];
   res.render("main/hb4", { technologies, layout: "index" });
 };
+const createCookie = (req: Request, res: Response) => {
+  if (!("nomeCookie" in req.cookies)) {
+    res.cookie("nomeCookie", "valorCookie");
+    res.send("Você NUNCA passou por aqui!");
+  } else {
+    res.send("Você JÁ passou por aqui");
+  }
+};
+const clearCookie = (req: Request, res: Response) => {
+  res.clearCookie("nomeCookie");
+  res.send("cookie apagado");
+};
 
-export default { index, sobre, lorem, hb1, hb2, hb3, hb4 };
+export default {
+  index,
+  sobre,
+  lorem,
+  hb1,
+  hb2,
+  hb3,
+  hb4,
+  createCookie,
+  clearCookie,
+};

@@ -5,6 +5,9 @@ import majorController from "../controllers/major";
 
 const router = Router();
 
+router.get("/create-cookie", mainController.createCookie);
+router.get("/clear-cookie", mainController.clearCookie);
+
 router.get("/", mainController.index);
 router.get("/sobre", mainController.sobre);
 router.get("/lorem/:count", mainController.lorem);
