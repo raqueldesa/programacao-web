@@ -13,6 +13,12 @@ const app = express();
 const PORT = process.env.PORT || 3333;
 const publicPath = `${process.cwd()}`;
 
+declare module "express-session" {
+  interface SessionData {
+    uid: string;
+  }
+}
+
 app.engine(
   "handlebars",
   engine({

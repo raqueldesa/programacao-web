@@ -3,6 +3,7 @@ import mainController from "../controllers/main";
 import produtoController from "../controllers/produtos";
 import majorController from "../controllers/major";
 import authController from "../controllers/auth";
+import { checkAuth } from "../middlewares/checkAuth";
 
 const router = Router();
 
@@ -30,7 +31,7 @@ router.post("/produto/:id", produtoController.remove);
 
 //Controlador Major
 router.get("/major", majorController.index);
-router.get("/major/create", majorController.create);
+router.get("/major/create", checkAuth, majorController.create);
 router.post("/major/create", majorController.create);
 router.get("/major/read/:id", majorController.read);
 router.get("/major/update/:id", majorController.update);
@@ -40,8 +41,8 @@ router.get("/major/remove/:id", majorController.remove);
 //Controlador Auth
 router.get("/auth/signup", authController.signup);
 router.post("/auth/signup", authController.signup);
+router.get("/auth/login", authController.login);
 router.post("/auth/login", authController.login);
-router.post("/auth/login", authController.login);
-router.post("/auth/logout", authController.logout);
+router.get("/auth/logout", authController.logout);
 
 export default router;
